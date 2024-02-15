@@ -1,12 +1,13 @@
 // src/Product.jsx
 
-const Product = () => {
-    return (
-      <div>
-        <h2>Tacos</h2>
-              <p>Price: 999 credits</p>
-      </div>
-    );
-  };
+const BookList = ({ books }) => {
+  return (
+		<ul>
+			{books.map((book) => {
+			return <li key={book.id}>{book.name}</li>;
+			})}
+		</ul>
+  );
+};
   
-  export default Product;
+  export default BookList;
