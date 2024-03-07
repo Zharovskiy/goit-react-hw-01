@@ -1,0 +1,36 @@
+.profile-box {
+  margin-top: 40px;
+  width: 600px;
+  height: 700px;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+.profile-box-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.profile-img {
+  width: 230px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.profile-tag {
+  color: gray;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.profile-location {
+  color: gray;
+  font-size: 38px;
+  font-weight: 400;
+}
