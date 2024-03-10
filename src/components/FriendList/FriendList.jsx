@@ -1,8 +1,10 @@
+import clsx from "clsx";
 import FriendListItem from "../FriendListItem/FriendListItem.jsx";
+import css from "./FriendList.module.css";
 
 const FriendList = ({ friends }) => {
   return (
-    <ul>
+    <ul className={clsx(css.friendList)}>
       {friends.map(({ id, avatar, name, isOnline }) => {
         return (
           <li key={id}>

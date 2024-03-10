@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import css from "../Profile/Profile.module.css";
+import css from "./Profile.module.css";
 
 const Profile = ({
   name,
@@ -10,24 +10,24 @@ const Profile = ({
 }) => {
   return (
     <div className={clsx(css.profileBox)}>
-      <div className="profile-box-info">
-        <img className="profile-img" src={image} alt="User avatar" />
-        <p className="profile-name">{name}</p>
-        <p className="profile-tag">@{tag}</p>
-        <p className="profile-location">{location}</p>
+      <div className={clsx(css.profileBoxInfo)}>
+        <img className={clsx(css.profileImg)} src={image} alt="User avatar" />
+        <p className={clsx(css.profileName)}>{name}</p>
+        <p className={clsx(css.profileTag)}>@{tag}</p>
+        <p className={clsx(css.profileLocation)}>{location}</p>
       </div>
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className={clsx(css.profileBottomBox)}>
+        <li className={clsx(css.profileBottomItem)}>
+          <span className={clsx(css.profileBottomText)}>Followers</span>
+          <span className={clsx(css.profileBottomQuantity)}>{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className={clsx(css.profileBottomItem)}>
+          <span className={clsx(css.profileBottomText)}>Views</span>
+          <span className={clsx(css.profileBottomQuantity)}>{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className={clsx(css.profileBottomItem)}>
+          <span className={clsx(css.profileBottomText)}>Likes</span>
+          <span className={clsx(css.profileBottomQuantity)}>{likes}</span>
         </li>
       </ul>
     </div>
