@@ -1,4 +1,4 @@
-.friendListItem {
+.box {
   border: 2px solid black;
   border-radius: 7px;
   width: 95px;
@@ -9,17 +9,17 @@
   padding: 10px;
 }
 
-.friendListImg {
+.img {
   width: 100%;
 }
 
-.friendListName {
+.name {
   margin: 10px 0;
   font-size: 24px;
 }
 
-.friendListOnline {
-  margin: 0 0 5px 0;
+.offline {
+  margin-bottom: 5px;
   color: red;
 }
 

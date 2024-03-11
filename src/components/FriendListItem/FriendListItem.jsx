@@ -3,16 +3,11 @@ import css from "./FriendListItem.module.css";
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <div className={clsx(css.friendListItem)}>
-      <img
-        className={clsx(css.friendListImg)}
-        src={avatar}
-        alt="Avatar"
-        width="48"
-      />
-      <p className={clsx(css.friendListName)}>{name}</p>
+    <div className={css.box}>
+      <img className={css.img} src={avatar} alt="Avatar" width="48" />
+      <p className={css.name}>{name}</p>
       <p
-        className={clsx(css.friendListOnline, {
+        className={clsx(css.offline, {
           [css.online]: isOnline,
         })}
       >

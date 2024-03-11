@@ -3,12 +3,12 @@ import css from "./TransactionHistory.module.css";
 
 const TransactionHistory = ({ items }) => {
   return (
-    <table className={clsx(css.table)}>
+    <table className={css.table}>
       <thead>
         <tr>
-          <th className={clsx(css.tableTh)}>Type</th>
-          <th className={clsx(css.tableTh)}>Amount</th>
-          <th className={clsx(css.tableTh)}>Currency</th>
+          <th className={css.thead}>Type</th>
+          <th className={css.thead}>Amount</th>
+          <th className={css.thead}>Currency</th>
         </tr>
       </thead>
 
@@ -16,14 +16,14 @@ const TransactionHistory = ({ items }) => {
         {items.map(({ id, type, amount, currency }, index) => {
           return (
             <tr
-              className={clsx(css.tableTrWhite, {
-                [css.tableTrGray]: index % 2,
+              className={clsx(css.tbodyTrWhite, {
+                [css.tbodyTrGray]: index % 2,
               })}
               key={id}
             >
-              <td className={clsx(css.tableTd)}>{type}</td>
-              <td className={clsx(css.tableTd)}>{amount}</td>
-              <td className={clsx(css.tableTd)}>{currency}</td>
+              <td className={css.tbodyTd}>{type}</td>
+              <td className={css.tbodyTd}>{amount}</td>
+              <td className={css.tbodyTd}>{currency}</td>
             </tr>
           );
         })}
